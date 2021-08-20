@@ -1,0 +1,19 @@
+{
+  "name": "dlg-exercise",
+  "version": "1.0.0",
+  "description": "Simple back-end API",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {},
+  "author": "Vinicius Machado Ribeiro",
+  "license": "ISC",
+  "repository": "https://github.com/vinicius-m9/DLG-exercise",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
