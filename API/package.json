@@ -11,7 +11,8 @@
     "start:dev": "nodemon --exec babel-node ./src/index.js",
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./build ./src/index.js -s",
-    "build": "npm run clean && npm run build-babel"
+    "build": "npm run clean && npm run build-babel",
+    "test": "jest --passWithNoTests --detectOpenHandles"
   },
   "author": "Vinicius Machado Ribeiro",
   "license": "ISC",
@@ -23,8 +24,10 @@
     "@babel/preset-env": "^7.15.0",
     "@babel/runtime": "^7.15.3",
     "dotenv": "^10.0.0",
+    "jest": "^27.0.6",
     "nodemon": "^2.0.12",
-    "standard": "^16.0.3"
+    "standard": "^16.0.3",
+    "supertest": "^6.1.6"
   },
   "dependencies": {
     "@babel/cli": "^7.14.8",
