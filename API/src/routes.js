@@ -1,5 +1,6 @@
 import {
   emptyParamsValidator,
+  jsonValidator,
   bodyContentValidator
 } from './middlewares'
 import {
@@ -10,7 +11,7 @@ import {
 export const initialize = server => {
   server.get('/removeDuplicate/:phrase', emptyParamsValidator, removeDuplicate)
 
-  server.post('/changeVowals', bodyContentValidator, changeVowals)
+  server.post('/changeVowals', jsonValidator, bodyContentValidator, changeVowals)
 }
 
 export default {

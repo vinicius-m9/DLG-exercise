@@ -2,10 +2,12 @@ import express from 'express'
 
 import routes from './routes'
 
-// create express server
+// create and setup express server
 const create = () => {
   const server = express()
   server.use(express.json())
+
+  routes.initialize(server)
 
   return server
 }
@@ -14,8 +16,6 @@ const create = () => {
 const start = () => {
   const PORT = process.env.PORT || 3000
   const server = create()
-
-  routes.initialize(server)
 
   server.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`)

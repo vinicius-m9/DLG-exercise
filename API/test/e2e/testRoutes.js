@@ -6,11 +6,16 @@ import Server from '../../src/server'
 const API = request(Server.create())
 
 // create removeDuplicate test route
-export const removeDuplicate = (phrase) => {
+export const removeDuplicate = phrase => {
   return API.get(`/removeDuplicate/${phrase}`)
 }
 
 // create changeVowals test route
-export const changeVowals = (body) => {
+export const changeVowals = body => {
   return API.post('/changeVowals').send(body)
+}
+
+export default {
+  removeDuplicate,
+  changeVowals
 }

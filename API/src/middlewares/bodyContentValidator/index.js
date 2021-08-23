@@ -1,7 +1,7 @@
 // middleware to validate the body content
 const bodyContentValidator = (req, res, next) => {
-  const phrase = (req.body.phrase).trim()
-  const letter = (req.body.letter).trim()
+  const phrase = req.body.phrase ? (req.body.phrase).trim() : req.body.phrase
+  const letter = req.body.letter ? (req.body.letter).trim() : req.body.letter
 
   if (!phrase &&
     !letter) return res.json({ error: 'Phrase and letter properties are required.' })
