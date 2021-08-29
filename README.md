@@ -32,3 +32,17 @@ To run the application locally:
 ```
 npm start
 ```
+
+## Running automated tests
+To run all tests:
+```
+npm run test
+```
+To run only the removeDuplicate route tests:
+```
+npm run test removeDuplicate
+```
+To run only the changeVowals route tests:
+```
+npm run test changeVowals
+```
